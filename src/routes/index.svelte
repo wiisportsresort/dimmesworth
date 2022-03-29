@@ -16,7 +16,7 @@
   <div class="w-[48rem] posts">
     {#each [...hydrator.posts]
       .filter((p) => !p.parent)
-      .sort(({ timestamp: a }, { timestamp: b }) => b.getTime() - a.getTime()) as post}
+      .sort(({ timestamp: a }, { timestamp: b }) => a.getTime() - b.getTime()) as post}
       <div class="mb-3">
         <PostCard {post} interactive="full" showShowRepliesMessage />
       </div>
