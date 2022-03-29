@@ -12,6 +12,7 @@
 </script>
 
 <script lang="ts">
+  import { browser } from '$app/env'
   import { hydrator } from '$lib/Hydrator'
   import IconButton from '$lib/IconButton.svelte'
   import LargePostCard from '$lib/LargePostCard.svelte'
@@ -46,7 +47,7 @@
   <div in:fade={{ duration: 100 }}>
     <div id="post">
       <header>
-        {#if window.history.length > 1}
+        {#if browser && window.history.length > 1}
           <div id="back-button-wrapper">
             <div on:click={() => window.history.back()}>
               <IconButton icon="arrow-left" size={32} iconSize={20} />

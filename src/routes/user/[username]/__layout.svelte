@@ -12,6 +12,7 @@
 </script>
 
 <script lang="ts">
+  import { browser } from '$app/env'
   import { page } from '$app/stores'
   import { hydrator } from '$lib/Hydrator'
   import IconButton from '$lib/IconButton.svelte'
@@ -40,7 +41,7 @@
   id="user-wrapper"
   class="flex flex-col items-center lg:items-start lg:max-w-6xl md:max-w-5xl lg:content-between lg:mx-auto lg:flex-row"
 >
-  {#if window.history.length > 1}
+  {#if browser && window.history.length > 1}
     <div id="back-button-wrapper" class="flex lg:w-min w-[42rem]">
       <div on:click={() => window.history.back()}>
         <IconButton icon="arrow-left" size={32} iconSize={20} />
