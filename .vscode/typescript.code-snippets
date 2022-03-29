@@ -1,0 +1,6 @@
+{
+  "pp": {
+    "prefix": "pp",
+    "body": ["{", "\tauthor: $1,", "\ttimestamp: $2,", "\tcontent: \"$3\",", "},"]
+  }
+}
