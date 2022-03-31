@@ -5,8 +5,10 @@
     if (post) return { props: { currentPost: post } }
     else
       return {
-        status: 404,
-        error: new Error(`Post ${params.id} not found`),
+        // status: 404,
+        // error: new Error(`Post ${params.id} not found`),
+        status: 301,
+        redirect: '/',
       }
   }
 </script>

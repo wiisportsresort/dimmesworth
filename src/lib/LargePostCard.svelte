@@ -60,6 +60,7 @@
   <div class="flex flex-col flex-1 body">
     {#if showParent && post.parent}
       <a
+        sveltekit:prefetch
         class="hover:underline hover:cursor-pointer text-[0.95rem] w-[fit-content] text-bluegray-400"
         href="/post/{post.parent.id}"
       >

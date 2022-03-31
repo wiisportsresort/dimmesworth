@@ -5,8 +5,10 @@
     if (user) return { props: { user } }
     else
       return {
-        status: 404,
-        error: new Error(`User ${params.username} not found`),
+        // status: 404,
+        // error: new Error(`User ${params.username} not found`),
+        status: 301,
+        redirect: '/',
       }
   }
 </script>
